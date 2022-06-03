@@ -1,1 +1,62 @@
 
+#exercice n1
+def max_number(x,y):
+    if x>y:# the condition
+        return x
+    return y
+def max_of_three( x, y, z ):
+    return max_number( x, max_number( y, z ) )
+print(max_of_three(20,35,19))
+
+#exercice 2
+def calculator():
+    a=int(input("enter number1: "))
+    b=int(input("enter number2: "))
+    Sum=a+b
+    Sub=a-b
+    return Sum,Sub
+calculator()
+
+#exercice 3
+def som(list):
+    x=0
+    for i in list:
+        x=x+int(i)
+    return(x)
+def multiply(list):
+    x=1
+    for i in list:
+        x=x*int(i)
+    return(x)
+def extract (list):
+    x=[]
+    y=[]
+    for i in list:
+        if(list.index(i)%2==0):
+            x.append(i)
+        else:
+            y.append(i)
+    print("list of pair",x)
+    print("list of odd",y)
+list1=[1,2,3,4,5,6,7,8,9]   
+
+extract(list1) 
+    
+#exercice 4
+txt=input("enter your list of word: ")
+list=txt.split("-")
+list.sort()
+"-".join(list)
+
+#exercice 5
+def my_sqrt(x):
+    return x**(0.5)
+
+def My_Bonus():
+    Q=[]
+    d=input("enter your comma-separated sequence")
+    D=d.split(",")
+    for i in D:        
+        q=round(my_sqrt((2*50*int(i))/30))
+        Q.append(q)
+    return Q
